@@ -1,0 +1,106 @@
+
+
+message Register_Request
+{
+  required string name = 1;
+  required string code = 2;
+  optional string birthday = 3;
+  optional string telphone = 4;
+  optional string mymaxim = 5;
+  optional string image = 6;
+  optional string image_name = 7;
+}
+message Message_Normal
+{
+  optional string sender = 1;
+  optional string reciver = 2;
+  optional string text = 3;
+  optional string time = 4;
+  optional string image = 5;
+  optional message_type type = 6;
+  optional int32 messagetype = 7;
+  optional string image_name = 8;
+  repeated string messageall = 9;
+  optional string group_name = 10;
+  optional string st_name = 11;
+  optional string time_new = 12;
+  
+}
+message Command
+{
+  optional string use1 = 1;
+  optional string use2 = 2;
+  optional int32 is_ok = 3;
+  optional string other_use = 4;
+  optional int32 other_use1 = 5;
+  optional string use3 = 6;
+  optional string random_ = 7;
+  
+}
+enum message_type
+{
+ normal = 1;
+ sound = 2;
+ video = 3;
+ unknown = 4;
+ system_ = 5;
+ query_friend = 6;
+ query_friend_ack = 7;
+ group = 8;
+ file_message = 9;
+}
+enum Command_Type
+{										
+  add_friend = 1;					
+  get_friend_info = 2;		
+  delete_friend= 3;				
+  change_other = 4;			
+  change_my_name = 5;				
+  change_my_passwd = 6;			
+  change_my_status = 7;				
+  quit = 8;
+  register_request = 9;
+  login_request = 10;
+  login_respnose = 11;
+  error = 12;
+  heart = 13;
+  request_address = 14;	
+  udp_ack = 15;
+  add_friend_ack = 16;	
+  friend_message = 17;	
+  not_ok = 18;
+  get_friend_address = 19;	
+  friend_login = 20;
+  friend_exit = 21;
+  create_group = 22;
+  group_message = 23;
+  change_friend_palace = 24;
+  remove_my_friend = 25;
+  change_mymaxim__ = 26;
+  exit_group = 27;
+  joinGroupRequest = 28;
+  groupmessage = 29;
+  camera_direct_send = 30;
+  camera_direct_recv = 31;
+  camera_direct_send_ack = 32;
+  camera_direct_recv_ack = 33;
+  camera_end = 34;
+  open_file_tcp = 35;
+  open_file_tcp_infor = 36;
+  file_detail = 37;	
+  file_download = 38;	
+  file_upload__ = 39;	
+  passwd_protect = 40;
+  findbackcode = 41;
+  passwd_change = 42;
+  heat_ack = 43;
+}
+message Message_
+{ 
+   required Command_Type type = 1;
+   optional Command command = 2;
+   repeated Message_Normal message_normal = 3;
+   optional Register_Request register_request = 4;
+   optional string id = 5;
+}
+

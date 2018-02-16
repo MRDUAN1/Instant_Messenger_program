@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/new/prefix2">
+        <file>btn_set_hover.png</file>
+        <file>btn_set_normal.png</file>
+        <file>btn_set_press.png</file>
+        <file>close.png</file>
+        <file>close_hover.png</file>
+        <file>close_press.png</file>
+        <file>minimize.png</file>
+        <file>minimize_hover.png</file>
+        <file>minimize_press.png</file>
+    </qresource>
+</RCC>
