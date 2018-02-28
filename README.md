@@ -1,2 +1,2 @@
 # Instant_Messenger_program
-一款高仿qq的聊天程序。大学第一个项目，写的不很好，好多全局变量
+一款高仿qq的聊天程序。大学第一个项目。代码结构：src/qq_main为登录界面，qmainstack为聊天界面文件，src/ffmpeg_video为视频聊天的接受发送文件，src_sound_record为录音文件,src/networkn为核心网络处理源文件
